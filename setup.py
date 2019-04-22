@@ -7,11 +7,11 @@ base_dir = os.path.dirname(__file__)
 
 
 setup(
-      name='sitech-django-views',
+      name='sitech-django-middlewares',
       version=version,
-      description='Sitech django view',
+      description='Sitech django middlewares',
       long_description=open(os.path.join(base_dir, "README.md")).read(),
-      url='https://github.com/sitmena/sitech-django-views',
+      url='https://github.com/sitmena/sitech-django-middlewares',
       classifiers=[
           'Environment :: Web Environment',
           'Framework :: Django',
@@ -27,7 +27,7 @@ setup(
           'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
       ],
-      keywords='Sitech django view',
+      keywords='Sitech django middlewares',
       author='Abdelhadi Abu-Shamleh',
       author_email='a.abushamleh@sit-mena.com',
       license='BSD',
