@@ -3,7 +3,7 @@ from threading import local
 _thread_locals = local()
 
 
-class RequestViewMiddleware:
+class RequestMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
 
