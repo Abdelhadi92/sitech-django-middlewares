@@ -12,7 +12,7 @@ Run the [pip](https://pip.pypa.io/en/stable/) command to install the latest vers
  access the [Request](https://docs.djangoproject.com/en/2.2/ref/request-response/#httprequest-objects) or [User](https://docs.djangoproject.com/en/2.2/ref/request-response/#django.http.HttpRequest.user) Object Inside the Models, Signals, Tasks ... etc.
  
  - Add `sitech_middlewares.request.RequestMiddleware` to `MIDDLEWARE`
- - Add `from sitech_middlewares.request import get_current_request`
+ - Add `from sitech_middlewares.request import get_current_request, get_current_user`
  - Call `get_current_request()` to obtain the current HttpRequest object.
  - Call `get_current_user()` to obtain the current User object.
 
