@@ -14,5 +14,6 @@ Run the [pip](https://pip.pypa.io/en/stable/) command to install the latest vers
  - Add `sitech_middlewares.request.RequestMiddleware` to `MIDDLEWARE`
  - Add `from sitech_middlewares.request import get_current_request`
  - Call `get_current_request()` to obtain the current HttpRequest object.
+ - Call `get_current_user()` to obtain the current User object.
 
 
