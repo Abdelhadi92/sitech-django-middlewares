@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db.models import ForeignKey, SET_NULL
+from django.utils.translation import gettext_lazy as _
 
 from sitech_middlewares.request import get_current_user
 
