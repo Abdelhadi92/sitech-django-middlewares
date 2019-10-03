@@ -1,11 +1,11 @@
 from django.conf import settings
-from django.db.models import ForeignKey, SET_NULL
+from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from sitech_middlewares.request import get_current_user
 
 
-class UserForeignKey(ForeignKey):
+class UserForeignKey(models.ForeignKey):
     """Model field UserForeignKey
     Saves a reference to a user. By using the `sitech_middlewares.request.RequestMiddleware`
     """
@@ -17,10 +17,11 @@ class UserForeignKey(ForeignKey):
         kwargs['to'] = settings.AUTH_USER_MODEL
 
         if auto_user or auto_user_add:
-            kwargs['on_delete'] = SET_NULL
-            kwargs['null'] = True
-            kwargs['blank'] = True
+            kwargs['on_delete'] = kwargs.get('on_delete', models.SET_NULL)
+            kwargs['null'] = kwargs.get('null', True)
+            kwargs['blank'] = kwargs.get('blank', True)
             kwargs['editable'] = kwargs.get('editable', False)
+            # todo: related name to be concatenated with the model name to fit in the abstract model approach
 
         super(UserForeignKey, self).__init__(**kwargs)
 
